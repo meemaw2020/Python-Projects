@@ -1,4 +1,5 @@
 import random
+import time
 
 a = 0
 b = input("Type a number for top range: ")
@@ -19,8 +20,9 @@ print("The program generated", target)
 count_times = 0
 
 while True:
+    time.sleep(1)
     count_times += 1
-    m = int((a + b) / 2)
+    m = int((a + b) // 2)
     if m == target:
         print(f'The number is {m}.')
         print("It guessed in", count_times, "times")
